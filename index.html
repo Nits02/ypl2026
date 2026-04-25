@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Yahavi Premier League • Season 2</title>
+    <meta name="description" content="Yahavi Premier League (YPL) Season 2 — Society Cricket Championship 2026." />
+
+    <!-- Fonts (CDN-friendly for GitHub Pages) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- AOS (scroll animations) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/hero.css" />
+  </head>
+  <body>
+    <!-- Fixed navbar used on all pages -->
+    <header class="nav" role="banner">
+      <div class="container nav-inner">
+        <a class="nav-logo" href="index.html" aria-label="YPL Home">
+          <!-- Uses your uploaded logo if present; falls back to text -->
+          <img src="assets/images/ypl-logo.jpg" alt="YPL Logo" onerror="this.remove()" />
+          <span aria-hidden="true">🏏</span>
+          <span>YPL S2</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="register.html">Register</a>
+          <a data-nav href="schedule.html">Schedule</a>
+          <a data-nav href="teams.html">Teams</a>
+          <a data-nav href="leaderboard.html">Leaderboard</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn--gold nav-cta-desktop" href="register.html">Register Now</a>
+          <button class="nav-burger" id="navBurger" type="button" aria-label="Open menu">
+            <div class="nav-burger-lines" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile overlay menu -->
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+      <button class="btn btn--outline nav-overlay-close" id="navOverlayClose" type="button">Close</button>
+      <div class="nav-overlay-inner">
+        <nav class="nav-overlay-links" aria-label="Mobile navigation">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="register.html">Register</a>
+          <a data-nav href="schedule.html">Schedule</a>
+          <a data-nav href="teams.html">Teams</a>
+          <a data-nav href="leaderboard.html">Leaderboard</a>
+          <a class="btn btn--gold" href="register.html" style="margin-top:.75rem;">Register Now</a>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero" aria-label="YPL Season 2 hero">
+        <div class="particles" aria-hidden="true">
+          <!-- Positions are set inline so each dot feels unique -->
+          <span class="particle" style="left:10%; bottom:18%;"></span>
+          <span class="particle" style="left:22%; bottom:10%;"></span>
+          <span class="particle" style="left:38%; bottom:22%;"></span>
+          <span class="particle" style="left:54%; bottom:12%;"></span>
+          <span class="particle" style="left:67%; bottom:20%;"></span>
+          <span class="particle" style="left:76%; bottom:8%;"></span>
+          <span class="particle" style="left:86%; bottom:24%;"></span>
+          <span class="particle" style="left:92%; bottom:14%;"></span>
+        </div>
+
+        <div class="container hero-content">
+          <span class="pill">Season 2</span>
+          <h1 class="hero-title">
+            <span>YAHAVI</span>
+            <span class="gold"> PREMIER LEAGUE</span>
+          </h1>
+          <p class="hero-sub muted">Society Cricket Championship 2026</p>
+
+          <!-- Countdown is driven by assets/js/main.js -->
+          <div class="countdown" id="countdown" aria-label="Countdown to tournament day">
+            <div class="countbox card">
+              <div class="countnum" id="cdDays">0</div>
+              <div class="countlabel">Days</div>
+            </div>
+            <div class="countbox card">
+              <div class="countnum" id="cdHours">00</div>
+              <div class="countlabel">Hours</div>
+            </div>
+            <div class="countbox card">
+              <div class="countnum" id="cdMins">00</div>
+              <div class="countlabel">Mins</div>
+            </div>
+            <div class="countbox card">
+              <div class="countnum" id="cdSecs">00</div>
+              <div class="countlabel">Secs</div>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn btn--gold" href="register.html">Register Now</a>
+            <a class="btn btn--outline" href="schedule.html">View Schedule</a>
+          </div>
+        </div>
+
+        <!-- Stats bar uses count-up animation from main.js -->
+        <div class="statsbar" aria-label="Tournament stats">
+          <div class="container statsbar-inner">
+            <div class="stat">
+              <strong data-countup="48">0</strong>
+              <span>Players</span>
+            </div>
+            <div class="stat">
+              <strong data-countup="8">0</strong>
+              <span>Teams</span>
+            </div>
+            <div class="stat">
+              <strong data-countup="2">0</strong>
+              <span>Season</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="section" aria-label="About YPL">
+        <div class="container">
+          <h2>What makes YPL special</h2>
+          <p class="muted" style="max-width: 70ch; margin-top: .35rem;">
+            A luxury night-league vibe, tight over limits, and pure society pride. Drafts, rivalries, and matchday energy — all in one season.
+          </p>
+
+          <div class="grid-3" style="margin-top: 1.25rem;">
+            <div class="card" data-aos="fade-up" style="padding: 1.1rem;">
+              <h3>Drafted teams</h3>
+              <p class="muted">Balanced squads and thrilling matchups — every over matters.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="80" style="padding: 1.1rem;">
+              <h3>Junior + Open</h3>
+              <p class="muted">Two categories, one league spirit — family-friendly competition.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="160" style="padding: 1.1rem;">
+              <h3>Premium matchday</h3>
+              <p class="muted">Clean scoring, on-time starts, and highlight-worthy moments.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE SECTION -->
+      <section class="section" aria-label="Season timeline">
+        <div class="container">
+          <h2>Season timeline</h2>
+          <p class="muted" style="max-width: 70ch; margin-top: .35rem;">
+            Key dates for announcements, drafts, and matchday.
+          </p>
+
+          <div class="card" style="margin-top: 1.2rem; padding: 1.2rem;">
+            <div style="display:grid; gap: .9rem;">
+              <!-- Vertical timeline (simple + responsive) -->
+              <div data-aos="fade-up">
+                <span class="pill">May 5, 2026</span>
+                <h3 style="margin-top:.55rem;">Team announcements</h3>
+                <p class="muted">Captains & squads revealed. Rivalries begin.</p>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="80">
+                <span class="pill">May 10, 2026</span>
+                <h3 style="margin-top:.55rem;">Draft night</h3>
+                <p class="muted">Final selections, jersey sizing, and fixtures lock-in.</p>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="160">
+                <span class="pill">May 15, 2026</span>
+                <h3 style="margin-top:.55rem;">Opening matchday</h3>
+                <p class="muted">Season 2 begins. Bring your A-game.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REGISTRATION CTA BANNER -->
+      <section class="section" aria-label="Registration CTA">
+        <div class="container">
+          <div class="card" style="padding: 1.2rem; border-color: rgba(255,211,106,.28); background: linear-gradient(135deg, rgba(255,211,106,.12), rgba(55,227,214,.08));">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap: 1rem; flex-wrap:wrap;">
+              <div>
+                <h3>Spots fill fast — secure your slot today</h3>
+                <p class="muted">Registrations are prioritized by payment confirmation and transaction reference.</p>
+              </div>
+              <a class="btn btn--gold" href="register.html">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="nav-logo" style="font-size:1.8rem;">
+            <img src="assets/images/ypl-logo.jpg" alt="YPL Logo" onerror="this.remove()" />
+            <span aria-hidden="true">🏏</span><span>YPL S2</span>
+          </div>
+          <p class="muted" style="margin-top:.6rem; max-width: 45ch;">
+            Yahavi Premier League — a society cricket tournament built for clean competition, family energy, and premium matchdays.
+          </p>
+        </div>
+        <div>
+          <div class="footer-title">Pages</div>
+          <div class="footer-links">
+            <a href="register.html">Register</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="teams.html">Teams</a>
+            <a href="leaderboard.html">Leaderboard</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-title">Important</div>
+          <div class="footer-links">
+            <span class="muted">Team announcements: May 5, 2026</span>
+            <span class="muted">Opening matchday: May 15, 2026</span>
+            <span class="muted">Venue: Society ground (TBA)</span>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Yahavi Premier League. All rights reserved.</span>
+        <span class="muted">Built for GitHub Pages • HTML/CSS/Vanilla JS</span>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+

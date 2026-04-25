@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Register • YPL Season 2</title>
+    <meta name="description" content="Register for Yahavi Premier League Season 2." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/register.css" />
+  </head>
+  <body>
+    <header class="nav" role="banner">
+      <div class="container nav-inner">
+        <a class="nav-logo" href="index.html" aria-label="YPL Home">
+          <img src="assets/images/ypl-logo.jpg" alt="YPL Logo" onerror="this.remove()" />
+          <span aria-hidden="true">🏏</span>
+          <span>YPL S2</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="register.html">Register</a>
+          <a data-nav href="schedule.html">Schedule</a>
+          <a data-nav href="teams.html">Teams</a>
+          <a data-nav href="leaderboard.html">Leaderboard</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="btn btn--gold nav-cta-desktop" href="register.html">Register Now</a>
+          <button class="nav-burger" id="navBurger" type="button" aria-label="Open menu">
+            <div class="nav-burger-lines" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+      <button class="btn btn--outline nav-overlay-close" id="navOverlayClose" type="button">Close</button>
+      <div class="nav-overlay-inner">
+        <nav class="nav-overlay-links" aria-label="Mobile navigation">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="register.html">Register</a>
+          <a data-nav href="schedule.html">Schedule</a>
+          <a data-nav href="teams.html">Teams</a>
+          <a data-nav href="leaderboard.html">Leaderboard</a>
+          <a class="btn btn--gold" href="register.html" style="margin-top:.75rem;">Register Now</a>
+        </nav>
+      </div>
+    </div>
+
+    <main class="register-hero">
+      <div class="container register-shell">
+        <div class="card progress">
+          <div class="progress-top">
+            <div>
+              <div class="progress-title">YPL S2 Registration</div>
+              <div class="muted" style="margin-top:.2rem;">4-step form • auto-saves as you type</div>
+            </div>
+            <div class="progress-meta" id="progressMeta">Step 1 of 4</div>
+          </div>
+          <div class="progress-track" aria-label="Registration progress">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="card form-card">
+          <!--
+            FormSubmit:
+            - Replace the email in the action URL before publishing
+            - Example: https://formsubmit.co/you@example.com
+          -->
+          <form id="registrationForm" action="https://formsubmit.co/yahavipremierleague@gmail.com" method="POST" novalidate>
+            <!-- Helpful hidden metadata for FormSubmit email -->
+            <input type="hidden" name="_subject" value="YPL Season 2 — New Registration" />
+            <input type="hidden" name="_template" value="table" />
+            <!-- Kept blank because this site shows an in-page success screen (no redirect) -->
+            <input type="hidden" name="_next" value="" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="calculatedFee" value="" />
+
+            <div class="steps-viewport">
+              <div class="steps" aria-live="polite">
+                <!-- STEP 1 — Personal Details -->
+                <section class="step" aria-label="Step 1 Personal details">
+                  <h2>Personal Details</h2>
+                  <p class="muted">Tell us who’s stepping onto the pitch.</p>
+
+                  <div class="field-grid">
+                    <div class="field">
+                      <label for="fullName">Full Name</label>
+                      <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" required />
+                      <div class="error" data-error-for="fullName"></div>
+                    </div>
+                    <div class="field">
+                      <label for="email">Email Address</label>
+                      <input class="input" id="email" name="email" type="email" autocomplete="email" required />
+                      <div class="error" data-error-for="email"></div>
+                    </div>
+                    <div class="field">
+                      <label for="mobile">Mobile Number</label>
+                      <input class="input" id="mobile" name="mobile" type="tel" inputmode="numeric" placeholder="10 digits" required />
+                      <div class="error" data-error-for="mobile"></div>
+                    </div>
+                    <div class="field">
+                      <span class="sr-only" id="genderLabel">Gender</span>
+                      <label>Gender</label>
+                      <div class="toggle" role="radiogroup" aria-labelledby="genderLabel">
+                        <input id="genderMale" type="radio" name="gender" value="Male" />
+                        <label for="genderMale">Male</label>
+                        <input id="genderFemale" type="radio" name="gender" value="Female" />
+                        <label for="genderFemale">Female</label>
+                      </div>
+                      <div class="error" data-error-for="gender"></div>
+                    </div>
+                  </div>
+
+                  <div class="nav-actions">
+                    <span></span>
+                    <button class="btn btn--gold js-next" type="button">Next</button>
+                  </div>
+                </section>
+
+                <!-- STEP 2 — Society Details -->
+                <section class="step" aria-label="Step 2 Society details">
+                  <h2>Society Details</h2>
+                  <p class="muted">Help us verify eligibility and grouping.</p>
+
+                  <div class="field-grid">
+                    <div class="field">
+                      <label for="towerWing">Tower/Wing</label>
+                      <select class="input" id="towerWing" name="towerWing" required>
+                        <option value="">Select tower/wing</option>
+                        <option value="Oak(T1)WingA">Oak(T1)WingA</option>
+                        <option value="Pine(T2)WingA">Pine(T2)WingA</option>
+                        <option value="Teak(T3)WingA">Teak(T3)WingA</option>
+                        <option value="Oak(T1)WingB">Oak(T1)WingB</option>
+                        <option value="Pine(T2)WingB">Pine(T2)WingB</option>
+                        <option value="Teak(T3)WingB">Teak(T3)WingB</option>
+                      </select>
+                      <div class="error" data-error-for="towerWing"></div>
+                    </div>
+
+                    <div class="field">
+                      <label for="flatNumber">Flat Number</label>
+                      <input class="input" id="flatNumber" name="flatNumber" type="text" placeholder="0001 to 2105" required />
+                      <div class="error" data-error-for="flatNumber"></div>
+                    </div>
+
+                    <div class="field" style="grid-column: 1 / -1;">
+                      <label>Resident Type</label>
+                      <div class="choices" data-choice-group="residentType" role="radiogroup" aria-label="Resident type">
+                        <div class="choice" data-choice="Owner" tabindex="0">
+                          <div class="choice-title">Owner</div>
+                          <div class="choice-sub">Primary resident</div>
+                        </div>
+                        <div class="choice" data-choice="Tenant" tabindex="0">
+                          <div class="choice-title">Tenant</div>
+                          <div class="choice-sub">Rental resident</div>
+                        </div>
+                        <div class="choice" data-choice="Immediate Family" tabindex="0">
+                          <div class="choice-title">Immediate Family</div>
+                          <div class="choice-sub">Family member</div>
+                        </div>
+                      </div>
+                      <!-- Hidden input to carry the selection -->
+                      <input type="hidden" name="residentType" value="" />
+                      <div class="error" data-error-for="residentType"></div>
+                    </div>
+
+                    <div class="field">
+                      <label for="familyCount">Family Player Count</label>
+                      <input class="input" id="familyCount" name="familyCount" type="number" min="1" max="10" value="1" />
+                      <div class="error" data-error-for="familyCount"></div>
+                    </div>
+                  </div>
+
+                  <div class="nav-actions">
+                    <button class="btn btn--outline js-back" type="button">Back</button>
+                    <button class="btn btn--gold js-next" type="button">Next</button>
+                  </div>
+                </section>
+
+                <!-- STEP 3 — Cricket Profile -->
+                <section class="step" aria-label="Step 3 Cricket profile">
+                  <h2>Cricket Profile</h2>
+                  <p class="muted">Pick your category, kit sizing, and role.</p>
+
+                  <div class="field-grid">
+                    <div class="field" style="grid-column: 1 / -1;">
+                      <label>Age Category</label>
+                      <div class="choices" data-choice-group="ageCategory" role="radiogroup" aria-label="Age category">
+                        <div class="choice" data-choice="junior" tabindex="0">
+                          <div class="choice-title">🧒 Junior</div>
+                          <div class="choice-sub">7–15 years • ₹700</div>
+                        </div>
+                        <div class="choice" data-choice="open" tabindex="0">
+                          <div class="choice-title">🧑 Open</div>
+                          <div class="choice-sub">Above 15 • ₹900</div>
+                        </div>
+                      </div>
+                      <input type="hidden" name="ageCategory" value="" />
+                      <div class="error" data-error-for="ageCategory"></div>
+                    </div>
+
+                    <div class="field" style="grid-column: 1 / -1;">
+                      <label>T-Shirt Size</label>
+                      <div class="pillset" data-pillset="tshirtSize" aria-label="T-shirt size">
+                        <button class="pillbtn" data-pill="XS" type="button">XS</button>
+                        <button class="pillbtn" data-pill="S" type="button">S</button>
+                        <button class="pillbtn" data-pill="M" type="button">M</button>
+                        <button class="pillbtn" data-pill="L" type="button">L</button>
+                        <button class="pillbtn" data-pill="XL" type="button">XL</button>
+                        <button class="pillbtn" data-pill="XXL" type="button">XXL</button>
+                      </div>
+                      <input type="hidden" name="tshirtSize" value="" />
+                      <div class="error" data-error-for="tshirtSize"></div>
+                    </div>
+
+                    <div class="field" style="grid-column: 1 / -1;">
+                      <label>Expertise</label>
+                      <div class="choices" data-choice-group="expertise" role="radiogroup" aria-label="Expertise">
+                        <div class="choice" data-choice="Batting" tabindex="0">
+                          <div class="choice-title">🏏 Batting</div>
+                          <div class="choice-sub">Top order / finisher</div>
+                        </div>
+                        <div class="choice" data-choice="Bowling" tabindex="0">
+                          <div class="choice-title">🎳 Bowling</div>
+                          <div class="choice-sub">Pace / spin</div>
+                        </div>
+                        <div class="choice" data-choice="Allrounder" tabindex="0">
+                          <div class="choice-title">⚡ Allrounder</div>
+                          <div class="choice-sub">Impact both innings</div>
+                        </div>
+                        <div class="choice" data-choice="Newbie" tabindex="0">
+                          <div class="choice-title">🆕 Newbie</div>
+                          <div class="choice-sub">Learning the game</div>
+                        </div>
+                      </div>
+                      <input type="hidden" name="expertise" value="" />
+                      <div class="error" data-error-for="expertise"></div>
+                    </div>
+                  </div>
+
+                  <div class="nav-actions">
+                    <button class="btn btn--outline js-back" type="button">Back</button>
+                    <button class="btn btn--gold js-next" type="button">Next</button>
+                  </div>
+                </section>
+
+                <!-- STEP 4 — Payment & Submit -->
+                <section class="step" aria-label="Step 4 Payment and submit">
+                  <h2>Payment &amp; Submit</h2>
+                  <p class="muted">Pay via UPI, confirm, then submit your registration.</p>
+
+                  <div class="pay-grid">
+                    <div class="fee-box">
+                      <div class="muted" style="font-family:var(--font-heading); letter-spacing:1px; text-transform:uppercase;">
+                        Calculated fee
+                      </div>
+                      <div class="fee-amt" id="feeAmount">—</div>
+                      <div class="muted" id="feeHint">Select an age category in Step 3.</div>
+
+                      <div class="upi-row">
+                        <span class="muted" style="font-family:var(--font-heading); letter-spacing:1px; text-transform:uppercase;">UPI ID</span>
+                        <span class="upi-id" id="upiId">ypl.s2@upi</span>
+                        <button class="btn btn--outline" id="copyUpi" type="button">Copy</button>
+                      </div>
+                    </div>
+
+                    <div class="qr" aria-label="UPI QR code">
+                      <!-- Shows uploaded QR image; falls back to text if missing -->
+                      <img
+                        src="assets/images/upi-qr.png"
+                        alt="UPI QR code for YPL payment"
+                        style="max-width: 100%; max-height: 100%; border-radius: 14px;"
+                        onerror="this.replaceWith(Object.assign(document.createElement('div'),{innerHTML:'<div style=&quot;font-family:var(--font-heading); letter-spacing:1px; text-transform:uppercase;&quot;>UPI QR Code</div><div class=&quot;muted&quot; style=&quot;margin-top:.35rem;&quot;>(Image missing)</div>'}))"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="field" style="margin-top: 1rem;">
+                    <label>
+                      <input type="checkbox" name="paymentConfirmed" />
+                      <span style="margin-left:.4rem;">I confirm the UPI payment is completed</span>
+                    </label>
+                    <div class="error" data-error-for="paymentConfirmed"></div>
+                  </div>
+
+                  <div class="field">
+                    <label for="txnRef">Transaction Reference Number</label>
+                    <input class="input" id="txnRef" name="txnRef" type="text" required />
+                    <div class="error" data-error-for="txnRef"></div>
+                  </div>
+
+                  <div class="nav-actions">
+                    <button class="btn btn--outline js-back" type="button">Back</button>
+                    <button class="submit" type="submit">Submit</button>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </form>
+
+          <div id="successRoot" style="margin-top: 1rem;"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="nav-logo" style="font-size:1.8rem;">
+            <img src="assets/images/ypl-logo.jpg" alt="YPL Logo" onerror="this.remove()" />
+            <span aria-hidden="true">🏏</span><span>YPL S2</span>
+          </div>
+          <p class="muted" style="margin-top:.6rem; max-width: 45ch;">
+            Registration is validated by payment confirmation and transaction reference.
+          </p>
+        </div>
+        <div>
+          <div class="footer-title">Pages</div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="teams.html">Teams</a>
+            <a href="leaderboard.html">Leaderboard</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-title">Need help?</div>
+          <div class="footer-links">
+            <span class="muted">Use a valid email and mobile number</span>
+            <span class="muted">Double-check UPI reference</span>
+            <span class="muted">Auto-save is enabled</span>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Yahavi Premier League. All rights reserved.</span>
+        <span class="muted">Built for GitHub Pages • HTML/CSS/Vanilla JS</span>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/register.js"></script>
+  </body>
+</html>
+
