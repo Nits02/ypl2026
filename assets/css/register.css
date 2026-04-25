@@ -259,6 +259,14 @@ select.input:focus{
   color: var(--text-2);
   text-align: center;
   padding: 1rem;
+  overflow: hidden;
+}
+
+.qr img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the QR never spills out */
+  display: block;
 }
 
 .upi-row{
@@ -354,5 +362,6 @@ select.input:focus{
   .choices{ grid-template-columns: 1fr; }
   .pay-grid{ grid-template-columns: 1fr; }
   .success-grid{ grid-template-columns: 1fr; }
+  .qr{ height: 260px; } /* Extra room so the QR stays scannable on phones */
 }
 
